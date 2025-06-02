@@ -19,7 +19,7 @@ class hero:
         self.speed=300
         self.angle_s=5
         
-        self.image_hero=pygame.image.load(r"C:\Users\MSI\Desktop\Hero1.png")
+        self.image_hero=pygame.image.load("Hero1.png")
         self.image_hero=pygame.transform.scale(self.image_hero, (100, 50))
         self.image_hero_true=self.image_hero
         self.cord_hero=self.image_hero_true.get_rect()
@@ -161,7 +161,7 @@ class hero:
         
 class Bullet:
     def __init__(self,x_bullet,y_bullet,angle_bullet,damage=100,speed_bullet=30):
-        self.image=pygame.transform.scale(pygame.image.load(r"C:\Users\MSI\Desktop\byllet.png"), (10, 10))
+        self.image=pygame.transform.scale(pygame.image.load("byllet.png"), (10, 10))
         self.x=x_bullet
         self.y=y_bullet
         self.angle=angle_bullet
@@ -181,7 +181,7 @@ class Bullet:
         
 class Bullet_Enemy:
     def __init__(self,x_bullet,y_bullet,angle_bullet,damage=10,speed_bullet=30):
-        self.image=pygame.transform.scale(pygame.image.load(r"C:\Users\MSI\Desktop\byllet.png"), (10, 10))
+        self.image=pygame.transform.scale(pygame.image.load("byllet.png"), (10, 10))
         self.x=x_bullet
         self.y=y_bullet
         self.angle=angle_bullet
@@ -216,7 +216,7 @@ class Enemy:
 
     
     def __init__(self,i):
-        self.image = pygame.transform.scale(pygame.image.load(r"C:\Users\MSI\Desktop\vrag2.png"), (100, 100))
+        self.image = pygame.transform.scale(pygame.image.load("vrag1.png"), (100, 100))
         self.current_point_index = i
         self.rect = self.image.get_rect(center=self.shared_path[self.current_point_index])
         self.speed = 2
@@ -462,7 +462,7 @@ Enemy.obstacles = Obstacle.obstacles
 hero.obstacles = Obstacle.obstacles
 obstacles = Obstacle.obstacles
 
-mapimage=pygame.transform.scale(pygame.image.load(r"C:\Users\MSI\Desktop\map.jpg"), (3000, 3000))
+mapimage=pygame.transform.scale(pygame.image.load("map.jpg"), (3000, 3000))
 maprect=mapimage.get_rect()
 
  
